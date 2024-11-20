@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br" class="scroll-smooth">
+<html lang="pt-br" class="scroll-smooth overflow-x-hidden">
 
 <head>
     <meta charset="UTF-8">
@@ -7,12 +7,14 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <title>Aventuras e Treinamentos</title>
 </head>
 
-<body class="bg-zinc-800 text-white">
+<body class="bg-zinc-800 text-white" >
     <!-- Header -->
-    <header class="bg-black text-white fixed w-full z-10 border-b-2 border-zinc-900 transition">
+    <header class="bg-black text-white fixed w-full z-50 border-b-2 border-zinc-900 transition">
         <nav class="container mx-auto flex justify-center md:justify-between items-center px-6 py-4">
             <h1 class="text-2xl font-bold">Treinamentos SAE</h1>
             <ul id="menu" class="space-x-6 hidden md:flex">
@@ -26,22 +28,23 @@
             </ul>
         </nav>
     </header>
+<!-- Hero Section -->
+<section class="h-screen relative flex items-center justify-center group">
+    <!-- Imagem de fundo com efeito blur -->
+    <img src="https://blog.localadventures.travel/wp-content/uploads/2018/11/2843462704_a7374460fb_o.jpg" 
+        alt="Imagem de fundo" 
+        class="transition-all select-none absolute inset-0 w-full h-full object-cover blur-sm z-0">
 
-    <!-- Hero Section -->
-    <section
-        class="h-screen min-h-dvh bg-cover bg-center flex items-center justify-center bg-[url('https://blog.localadventures.travel/wp-content/uploads/2018/11/2843462704_a7374460fb_o.jpg')] bg-opacity-50">
-        <div class=" h-screen bg-cover bg-center flex items-center justify-center">
-            <div class=" text-center max-w-2xl">
-                <h2 class="text-4xl font-bold mb-4">Desafie seus Limites: Rapel, NR e Resgate para Aventureiros de
-                    Verdade</h2>
-                <p class="text-lg mb-6">Libere a adrenalina e conquiste novas alturas com nossos treinamentos de rapel,
-                    NR e resgate. Desenvolva habilidades essenciais e explore destinos incríveis.</p>
-                <a href="#contato"
-                    class="bg-emerald-500 text-black px-6 py-3 rounded-full hover:bg-emerald-400 hover:shadow-lg focus:scale-105 transition-transform">Descubra
-                    Novas Alturas!</a>
-            </div>
-        </div>
-    </section>
+    <!-- Conteúdo com o texto -->
+    <div class="relative z-10 text-center max-w-2xl group-active:scale-105 transition">
+        <h2 class="text-4xl font-bold mb-4 text-white hover:scale-105 transition">Desafie seus Limites: Rapel, NR e Resgate para Aventureiros de Verdade</h2>
+        <p class="text-lg mb-6 text-white hover:scale-105 transition">Libere a adrenalina e conquiste novas alturas com nossos treinamentos de rapel, NR e resgate. Desenvolva habilidades essenciais e explore destinos incríveis.</p>
+        <a href="#contato" class="bg-emerald-500 text-black px-6 py-3 rounded-full hover:bg-emerald-400 hover:shadow-lg focus:scale-105 transition-transform hover:scale-105 transition">
+            Descubra Novas Alturas!
+        </a>
+    </div>
+</section>
+
 
     <!-- Sobre Nós -->
     <section id="sobre" class="py-16 bg-zinc-900">
@@ -59,20 +62,20 @@
         <div class="container mx-auto">
             <h3 class="text-3xl font-bold text-center text-zinc-800 mb-8 hover:text-black transition">Nossos Serviços
             </h3>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div data-aos="zoom-in-right" data-aos-duration="300"
                     class="group group-hover:bg-white md:hover:scale-105 hover:mb- transition-all bg-zinc-50 border-t-2 border-zinc-300 p-6 text-center shadow-lg  focus:scale-105 transition-transform">
                     <h4 class="text-xl text-zinc-700 font-bold mb-4">Rapel Esportivo</h4>
                     <p class="text-zinc-500">Desafie a gravidade com nosso rapel, sempre guiado por especialistas
                         certificados.</p>
                 </div>
-                <div
+                <div data-aos="zoom-in-down" data-aos-duration="200"
                     class="group group-hover:bg-white md:hover:scale-105 hover:mb- transition-all bg-zinc-50 border-t-2 border-zinc-300 p-6 text-center shadow-lg  focus:scale-105 transition-transform">
                     <h4 class="text-xl text-zinc-700 font-bold mb-4">Treinamentos NR</h4>
                     <p class="text-zinc-500">Certificações e treinamentos profissionais para garantir a segurança no
                         trabalho.</p>
                 </div>
-                <div
+                <div data-aos="zoom-in-left" data-aos-duration="300"
                     class="group group-hover:bg-white md:hover:scale-105 transition-all bg-zinc-50 border-t-2 border-zinc-300 p-6 text-center shadow-lg  focus:scale-105 transition-transform">
                     <h4 class="text-xl text-zinc-700 font-bold mb-4">Atendimento Pré-Hospitalar</h4>
                     <p class="text-zinc-500">Aprenda técnicas essenciais de primeiros socorros com nossos especialistas.
@@ -87,14 +90,16 @@
         <div class="container mx-auto text-center">
             <h3 class="text-3xl font-bold mb-8">O que dizem nossos clientes</h3>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="group p-6 bg-zinc-700 shadow-lg  md:hover:scale-105 transition-transform">
+                <div data-aos="fade-right" data-aos-duration="800"
+                class="group p-6 bg-zinc-700 shadow-lg  md:hover:scale-105 transition-transform">
                     <p class="italic text-zinc-300 group-hover:text-white">"Foi espetacular!!! Que aventura! Parabéns!
                         <a target="_blank" class="text-emerald-500 hover:text-emerald-300 transition-colors"
                             href="https://www.instagram.com/treinamentos.sae/">@treinamentos.sae</a> 👏."
                     </p>
                     <h4 class="mt-4 font-bold">- Jurema Cunha</h4>
                 </div>
-                <div class="group p-6 bg-zinc-700 shadow-lg  md:hover:scale-105 transition-transform">
+                <div data-aos="fade-left" data-aos-duration="800"
+                class="group p-6 bg-zinc-700 shadow-lg  md:hover:scale-105 transition-transform">
                     <p class="italic text-zinc-300 group-hover:text-white">"Muita diversão e aprendizado com segurança
                         ✌️"</p>
                     <h4 class="mt-4 font-bold">- Lucilene Ferreira</h4>
@@ -126,16 +131,16 @@
             <p class="text-lg mb-6">Entre em contato conosco e descubra como podemos transformar sua jornada.</p>
             <form class="max-w-md mx-auto">
                 <input type="email" placeholder="Onde deseja receber emails?" required
-                    class="w-full p-3 rounded mb-4 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition caret-emerald-600 focus:bg-zinc-800 focus:placeholder-emerald-400 focus:text-white">
+                    class="w-full p-3 rounded-t border-none focus:outline-none focus:ring-0 focus:ring-emerald-400 focus:border-emerald-500 transition caret-emerald-600 focus:bg-zinc-800 focus:placeholder-zinc-400 lowercase focus:text-white">
                 <button type="submit"
-                    class="bg-black text-white px-6 py-3 rounded hover:bg-zinc-50 hover:text-black focus:scale-105 transition">Enviar</button>
+                    class="bg-black text-white px-6 py-3 rounded-b hover:bg-zinc-50 hover:text-black active:bg-zinc-100 transition w-full">Enviar</button>
             </form>
         </div>
     </section>
 
     <!-- Botão para subir ao topo -->
     <button id="scrollToTop"
-        class="fixed bottom-6 right-6 bg-emerald-500 text-white p-4 rounded-full shadow-lg hidden hover:bg-emerald-400 transition">
+        class="animate-bounce transition fixed bottom-6 right-6 bg-emerald-500 text-white p-4 rounded-full shadow-lg hidden hover:bg-emerald-400 transition">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
         </svg>
@@ -144,7 +149,7 @@
     <!-- Footer -->
     <footer class="bg-zinc-900 py-6">
         <div class="container mx-auto text-center">
-            <p class="text-zinc-400">© 2024 Treinamentos SAE. Todos os direitos reservados.</p>
+            <p class="text-zinc-400">© 2024 <a class="hover:underline hover:text-zinc-200 transtion" target="_blank" href="https://www.instagram.com/treinamentos.sae/">Treinamentos SAE</a>. Todos os direitos reservados.</p>
         </div>
     </footer>
 
@@ -173,11 +178,10 @@
                 behavior: 'smooth'
             });
         });
+        lucide.createIcons();
+        AOS.init();
     </script>
     <script src="https://unpkg.com/lucide@latest"></script>
-    <script>
-        lucide.createIcons();
-    </script>
 </body>
 
 </html>
